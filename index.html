@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+	<title></title>
+	<style type="text/css">
+	body:{margin:0px;
+		  padding:0px;}
+	table {border:2px solid black;
+			border-spacing:0;
+			background: linear-gradient(to right, #e0ebeb, #486a6a);}
+	td {border: 1px solid black;
+		padding:5px 10px;
+		font-size:20px;}
+	th {border: 1px solid black;
+		padding:5px;
+		font-size:20px;
+		}
+	#like {background-color:rgba(0,191,255,0.5);
+		   border:1px solid #002699;
+		   border-radius:7px;
+		   box-shadow:2px 2px 2px grey inset;	   
+			color:white;
+			font-size:15px;}
+	#dislike {background-color:rgba(255,140,26,0.5);
+			  border:1px solid #002699;
+		   border-radius:7px;
+		   box-shadow:2px 2px 2px  grey inset;
+		   color:white;
+			font-size:15px;}
+	</style>
+</head>
+<body ng-controller="myController">
+	<div>
+		<table>
+			<thead>
+				<tr>
+					<th>Foods</th>
+					<th>Likes</th>
+					<th>Dislikes</th>
+					<th>Like/Dislike</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="food in foods">
+					<td>{{ food.name }}</td>
+					<td>{{ food.likes }}</td>
+					<td>{{ food.dislikes }}</td>
+					<td>
+						<input type="button" id="like" value="like" ng-click="incrementLikes(food)">
+						<input type="button" id="dislike" value="dislike" ng-click="incrementDislikes(food)">
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+<script src=scripts/script.js></script>
+</body>
+</html>
