@@ -1,3 +1,0 @@
-### I Built a Simple Like/Dislike Table Wherein the User's Opinion of the McDonalds Menu is Being Displayed Dynamically
-
-#### I created a simple table using Angular JS to capture the user's opinion of the quality of the McDonalds menu items. As the user clicks on the like/dislike button, the count of either is being incremented in the table (view). Applied some CSS3 gradients in order to style the table.
